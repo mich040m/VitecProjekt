@@ -40,14 +40,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <form method="POST">
+                                <div>Brugernavn: <input type="text" /></div>
+                                <div>Password: <input type="password" /></div>
+                                <input type="submit" />
+                            </form>
+                        </li>
+                        @*Peter was here*@
                     </ul>
                     @*Peter was here*@
-                    <form method="POST">
-                        <div>Brugernavn: <input asp-for="Customer.Name" /></div>
-                        <div>Password: <input asp-for="Customer.Name" /></div>
-                        <input type="submit" />
-                    </form>
-                    @*Peter was here*@
+               
+
                 </div>
             </div>
         </nav>
