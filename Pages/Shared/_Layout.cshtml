@@ -31,22 +31,22 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
 
                     <ul class="navbar-nav flex-grow-1">
-                        
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Subscription">Abonnement</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Product">Produkter</a>
                         </li>
-                        
+
 
                     </ul>
-
+                    
                 </div>
                 
                 <ul class="navbar-nav  ml-auto">
                     <li class="nav-item float-right text-right ">
-                        <a class="nav-link text-dark   " asp-area="" asp-page="/Login">Login/Opret</a>
+                        <partial name="_LoginPartial" />
                     </li>
                 </ul>
                 
