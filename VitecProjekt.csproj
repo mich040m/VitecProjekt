@@ -8,11 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\Sub.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Sub.png" />
+    <EmbeddedResource Include="wwwroot\Images\Sub.png" />
   </ItemGroup>
 
 
