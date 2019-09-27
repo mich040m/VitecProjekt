@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ApplicationInsights;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace VitecProjekt
 {
@@ -34,6 +36,9 @@ namespace VitecProjekt
             });
 
             services.AddApplicationInsightsTelemetry();
+
+           
+           
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             
         }
