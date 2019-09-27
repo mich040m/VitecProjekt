@@ -19,6 +19,7 @@ namespace VitecProjekt.Pages
         {
             
             telemetry.TrackEvent("Main page loaded");
+            
         }
     }
 }
