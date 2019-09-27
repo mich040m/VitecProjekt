@@ -1,5 +1,6 @@
 # VitecProjekt
 
+Kanban/Scrum Board : https://trello.com/b/YmnrXPU3/3-semester-projekt
 
 Til Simon:
 
