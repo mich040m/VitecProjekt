@@ -20,6 +20,7 @@ namespace VitecProjekt
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                
                 .UseStartup<Startup>()
                 .ConfigureLogging(logging =>
                 {
