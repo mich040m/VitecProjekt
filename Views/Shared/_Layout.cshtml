@@ -1,6 +1,4 @@
-﻿
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -27,7 +25,7 @@
 
             <div class="container">
 
-                <a class="navbar-brand" asp-area="" asp-page="/Index">VitecSystem</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VitecSystem</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,26 +35,26 @@
                     <ul class="navbar-nav flex-grow-1">
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Subscription">Abonnement</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Subscription">Abonnement</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Product">Produkter</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Product">Produkter</a>
                         </li>
 
 
                     </ul>
-                    
+
                 </div>
-                
+
                 <ul class="navbar-nav  ml-auto">
                     <li class="nav-item float-right text-right ">
                         <partial name="_LoginPartial" />
                     </li>
                 </ul>
-                
-                    
-                </div>
-</nav>
+
+
+            </div>
+        </nav>
     </header>
     <div class="container">
         <partial name="_CookieConsentPartial" />
@@ -69,13 +67,12 @@
     <footer class="page-footer font-small unique-color-dark">
 
         <div style="background-color: #6351ce;">
-            <div class="container h-25" >
+            <div class="container h-25">
 
                 <!-- Grid row-->
                 <div class="row py-4 d-flex align-items-center">
 
                     <!-- Grid column -->
-                   
                     <!-- Grid column -->
                     <!-- Grid column -->
                     <div class="col-md-6 col-lg-7 text-center text-md-right">
@@ -137,7 +134,7 @@
                     <p>
                         <a href="#!">MDBootstrap</a>
                     </p>
-                   
+
                     <p>
                         <a href="#!">BrandFlow</a>
                     </p>
@@ -159,7 +156,7 @@
                     <p>
                         <a href="#!">Meld dig ind</a>
                     </p>
-                    
+
                     <p>
                         <a href="#!">Hjælp</a>
                     </p>
@@ -181,7 +178,7 @@
                     <p>
                         <i class="fas fa-phone mr-3"></i> + 45 22 22 22 22
                     </p>
-                    
+
 
                 </div>
                 <!-- Grid column -->
