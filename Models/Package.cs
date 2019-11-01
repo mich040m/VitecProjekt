@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace VitecProjekt.Models
 {
-    public class Subscription
+    public class Package
     {
         public int Id { get; set; }
-        public string SubscriptionName { get; set; }
-        public List<Product> Products { get; set; }
-
+        public int NumberOfDays { get; set; }
+        public double Price { get; set; }
+        public Subscription Subscription { get; set; }
     }
 }
