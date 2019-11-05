@@ -11,5 +11,6 @@ namespace VitecProjekt.Models
         public int NumberOfDays { get; set; }
         public double Price { get; set; }
         public Subscription Subscription { get; set; }
+        
     }
 }
