@@ -49,6 +49,12 @@ namespace VitecProjekt
 
             services.AddApplicationInsightsTelemetry();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<VitecProjektContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("VitecProjektContext")));
+
+            services.AddDbContext<VitecProjektModelsContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("VitecProjektModelsContext")));
             
         }
 
