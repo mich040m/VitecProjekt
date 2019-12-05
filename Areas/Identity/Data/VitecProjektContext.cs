@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using VitecProjekt.Areas.Identity.Data;
 
-namespace VitecProjekt.Models
+namespace VitecProjekt.Areas.Identity.Data
 {
     public class VitecProjektContext : IdentityDbContext<VitecUser>
     {

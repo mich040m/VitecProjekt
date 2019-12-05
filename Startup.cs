@@ -13,8 +13,7 @@ using Microsoft.ApplicationInsights;
 using Microsoft.EntityFrameworkCore;
 using VitecProjekt.Models;
 using VitecProjekt.Data;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
+using VitecProjekt.Areas.Identity.Data;
 
 namespace VitecProjekt
 {

@@ -20,7 +20,7 @@ namespace VitecProjekt.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("VitecProjektContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>()
+                services.AddDefaultIdentity<VitecUser>()
                     .AddEntityFrameworkStores<VitecProjektContext>()
                     .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<VitecProjektContext>();

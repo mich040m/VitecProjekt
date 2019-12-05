@@ -13,7 +13,7 @@ namespace VitecProjekt.Data
         public static async Task Seed(IServiceProvider serviceProvider)
         {
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<VitecUser>>();
 
             string[] roleNames = { "Admin" };
             IdentityResult roleResult;
@@ -30,11 +30,11 @@ namespace VitecProjekt.Data
             }
 
             //Tilføjer en admin user til DB
-            IdentityUser user = await userManager.FindByEmailAsync("Admin@gmail.com");
+            VitecUser user = await userManager.FindByEmailAsync("Admin@gmail.com");
 
             if (user == null)
             {
-                user = new IdentityUser()
+                user = new VitecUser()
                 {
                     UserName = "Admin@gmail.com",
                     Email = "Admin@gmail.com",

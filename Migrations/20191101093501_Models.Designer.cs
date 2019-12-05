@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using VitecProjekt.Models;
+using VitecProjekt.Areas.Identity.Data;
 
 namespace VitecProjekt.Migrations
 {
