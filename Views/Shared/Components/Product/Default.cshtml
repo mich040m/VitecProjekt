@@ -1,8 +1,7 @@
 ﻿@model IEnumerable<VitecProjekt.Models.Product>
 @using Microsoft.AspNetCore.Identity
-@using VitecProjekt.Areas.Identity.Data
-@inject SignInManager<VitecUser> SignInManager
-@inject UserManager<VitecUser> UserManager
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 @{
     ViewData["Title"] = "Products";

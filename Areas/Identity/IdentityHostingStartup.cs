@@ -5,8 +5,7 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using VitecProjekt.Areas.Identity.Data;
-using VitecProjekt.Models;
+using VitecProjekt.Data;
 
 [assembly: HostingStartup(typeof(VitecProjekt.Areas.Identity.IdentityHostingStartup))]
 namespace VitecProjekt.Areas.Identity
@@ -20,10 +19,9 @@ namespace VitecProjekt.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("VitecProjektContextConnection")));
 
-                services.AddDefaultIdentity<VitecUser>()
+                services.AddDefaultIdentity<IdentityUser>()
                     .AddEntityFrameworkStores<VitecProjektContext>()
-                    .AddRoles<IdentityRole>()
-                    .AddEntityFrameworkStores<VitecProjektContext>();
+                    .AddRoles<IdentityRole>();
             });
         }
     }

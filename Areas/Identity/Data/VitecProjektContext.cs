@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using VitecProjekt.Areas.Identity.Data;
 
-namespace VitecProjekt.Areas.Identity.Data
+namespace VitecProjekt.Data
 {
-    public class VitecProjektContext : IdentityDbContext<VitecUser>
+    public class VitecProjektContext : IdentityDbContext<IdentityUser>
     {
         public VitecProjektContext(DbContextOptions<VitecProjektContext> options)
             : base(options)

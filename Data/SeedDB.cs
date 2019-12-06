@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using VitecProjekt.Areas.Identity.Data;
 
 namespace VitecProjekt.Data
 {
@@ -13,7 +12,7 @@ namespace VitecProjekt.Data
         public static async Task Seed(IServiceProvider serviceProvider)
         {
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            var userManager = serviceProvider.GetRequiredService<UserManager<VitecUser>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
             string[] roleNames = { "Admin" };
             IdentityResult roleResult;
@@ -30,11 +29,11 @@ namespace VitecProjekt.Data
             }
 
             //Tilføjer en admin user til DB
-            VitecUser user = await userManager.FindByEmailAsync("Admin@gmail.com");
+            IdentityUser user = await userManager.FindByEmailAsync("Admin@gmail.com");
 
             if (user == null)
             {
-                user = new VitecUser()
+                user = new IdentityUser()
                 {
                     UserName = "Admin@gmail.com",
                     Email = "Admin@gmail.com",
