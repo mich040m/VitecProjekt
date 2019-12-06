@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ApplicationInsights;
 using Microsoft.EntityFrameworkCore;
 using VitecProjekt.Models;
+using VitecProjekt.Data;
+using VitecProjekt.Areas.Identity.Data;
 
 namespace VitecProjekt
 {
@@ -48,18 +50,17 @@ namespace VitecProjekt
             });
 
             services.AddApplicationInsightsTelemetry();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDbContext<VitecProjektContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("VitecProjektContext")));
 
             services.AddDbContext<VitecProjektModelsContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("VitecProjektModelsContext")));
-            
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             
             if (env.IsDevelopment())
@@ -85,6 +86,8 @@ namespace VitecProjekt
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //SeedDB.Seed(serviceProvider).Wait();
         }
     }
 }

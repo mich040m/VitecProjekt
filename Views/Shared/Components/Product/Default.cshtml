@@ -9,9 +9,7 @@
     
 }
 
-
-
-@if (SignInManager.IsSignedIn(User))
+@if (User.IsInRole("Admin"))
 {
     <p>
         <a asp-action="Create">Create New</a>
@@ -39,7 +37,6 @@
             </tbody>
         </table>
     </div>
-    
     
 }
 else
