@@ -21,6 +21,8 @@ namespace VitecProjekt.Areas.Identity
                         context.Configuration.GetConnectionString("VitecProjektContextConnection")));
 
                 services.AddDefaultIdentity<VitecUser>()
+                    .AddEntityFrameworkStores<VitecProjektContext>()
+                    .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<VitecProjektContext>();
             });
         }

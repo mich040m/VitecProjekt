@@ -1,0 +1,62 @@
+﻿@model IEnumerable<VitecProjekt.Models.Product>
+@using Microsoft.AspNetCore.Identity
+@using VitecProjekt.Areas.Identity.Data
+@inject SignInManager<VitecUser> SignInManager
+@inject UserManager<VitecUser> UserManager
+
+@{
+    ViewData["Title"] = "Products";
+    
+}
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <div class="container  mt-5 ">
+        <table class="table">
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+}
+else
+{
+    <div class="container  mt-5 ">
+        <table class="table">
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
