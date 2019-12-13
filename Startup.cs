@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using VitecProjekt.Models;
 using VitecProjekt.Data;
 using VitecProjekt.Areas.Identity.Data;
+using VitecProjekt.Middleware;
 
 namespace VitecProjekt
 {
@@ -75,6 +76,7 @@ namespace VitecProjekt
             }
 
             app.UseHttpsRedirection();
+            app.UseSecurityHeaders();
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseAuthentication();
